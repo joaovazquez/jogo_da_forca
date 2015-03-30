@@ -112,6 +112,8 @@ while True:
          senha+=letra if letra in acertos else "."
      def construindo_linhas():
          lapis=turtle.Turtle()
+         lapis.pensize(5)
+         lapis.speed(3)
          lapis.hideturtle()
          lapis.penup()
          lapis.setpos(-180,20)
@@ -148,7 +150,12 @@ while True:
      elif erros>=6:
          construindo_perna2()
      if erros==6:
-         print("Enforcado!")
+         def enforcado():
+             lapis=turtle.Turtle()
+             lapis.hideturtle()
+             lapis.penup()
+             lapis.write('Enforcado',move =False,align='left',font=('Cambria',45,'normal'))
+         enforcado()        
          break
      
 window.exitonclick()
