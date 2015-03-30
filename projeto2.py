@@ -9,19 +9,19 @@ def construindo_forca():
     lapis=turtle.Turtle()
     lapis.speed(3)
     lapis.pensize(8)
-    lapis.back(200)
+    lapis.back(300)
     lapis.penup()
     lapis.left(90)
     lapis.pendown()
-    lapis.forward(200)
+    lapis.forward(300)
     lapis.penup()
     lapis.right(90)
     lapis.pendown()
-    lapis.forward(100)
+    lapis.forward(120)
     lapis.penup()
     lapis.right(90)
     lapis.pendown()
-    lapis.forward(20)
+    lapis.forward(110)
 
 def construindo_cabeca():
     
@@ -32,7 +32,7 @@ def construindo_cabeca():
     lapis.setpos(-180,180)
     lapis.left(180)
     lapis.pendown()
-    lapis.circle(20)
+    lapis.circle(23)
     lapis.color('blue')
 
 def construindo_corpo():
@@ -41,7 +41,7 @@ def construindo_corpo():
     lapis.speed(3)
     lapis.pensize(5)
     lapis.penup()
-    lapis.setpos(-180,140)
+    lapis.setpos(-180,40)
     lapis.pendown()
     lapis.right(90)
     lapis.forward(100)
@@ -79,7 +79,7 @@ def construindo_perna1():
     lapis.penup()
     lapis.setpos(-180,40)
     lapis.pendown()
-    lapis.right(30)
+    lapis.right(400)
     lapis.forward(40)
     lapis.color('blue')
 
@@ -90,7 +90,7 @@ def construindo_perna2():
     lapis.pensize(5)
     lapis.penup()
     lapis.setpos(-180,40)
-    lapis.left(60)
+    lapis.left(130)
     lapis.forward(40)
     lapis.color('blue')
 
@@ -116,7 +116,7 @@ while True:
          lapis.speed(3)
          lapis.hideturtle()
          lapis.penup()
-         lapis.setpos(-180,20)
+         lapis.setpos(-270,-80)
          lapis.write(senha,move=False,align='left',font=('Cambria',45,'normal'))
          construindo_linhas()
      if senha==palavra:
@@ -154,6 +154,7 @@ while True:
              lapis=turtle.Turtle()
              lapis.hideturtle()
              lapis.penup()
+             lapis.setpos(10,10)
              lapis.write('Enforcado',move =False,align='left',font=('Cambria',45,'normal'))
          enforcado()        
          break
