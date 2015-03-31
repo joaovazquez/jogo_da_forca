@@ -145,5 +145,5 @@ while True:
          enforcado()        
          break
      
-window.exitonclick()
+window.exitonclick() 
 
