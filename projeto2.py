@@ -3,12 +3,13 @@ window=turtle.Screen()
 window.setup(width=1400,startx=None, starty=None)
 window.bgcolor('yellow')
 window.title('Forca')
+lapis=turtle.Turtle()
+lapis.speed(3)
 
 def construindo_forca():
     
-    lapis=turtle.Turtle()
-    lapis.speed(3)
-    lapis.pensize(8)
+    lapis.pensize(5)
+    lapis.pendown()
     lapis.back(300)
     lapis.penup()
     lapis.left(90)
@@ -24,9 +25,7 @@ def construindo_forca():
     lapis.forward(110)
 
 def construindo_cabeca():
-    
-    lapis=turtle.Turtle()          
-    lapis.speed(3)
+              
     lapis.pensize(7)
     lapis.penup()
     lapis.setpos(-180,180)
@@ -37,8 +36,6 @@ def construindo_cabeca():
 
 def construindo_corpo():
     
-    lapis=turtle.Turtle()
-    lapis.speed(3)
     lapis.pensize(5)
     lapis.penup()
     lapis.setpos(-180,40)
@@ -48,9 +45,7 @@ def construindo_corpo():
     lapis.color('blue')
 
 def construindo_braco1():
-    
-    lapis=turtle.Turtle()
-    lapis.speed(3)
+
     lapis.pensize(5)
     lapis.penup()
     lapis.setpos(-180,120)
@@ -61,8 +56,6 @@ def construindo_braco1():
 
 def construindo_braco2():
     
-    lapis=turtle.Turtle()
-    lapis.speed(3)
     lapis.pensize(5)
     lapis.penup()
     lapis.setpos(-180,120)
@@ -73,8 +66,6 @@ def construindo_braco2():
 
 def construindo_perna1():
     
-    lapis=turtle.Turtle()
-    lapis.speed(3)
     lapis.pensize(5)
     lapis.penup()
     lapis.setpos(-180,40)
@@ -84,9 +75,7 @@ def construindo_perna1():
     lapis.color('blue')
 
 def construindo_perna2():
-    
-    lapis=turtle.Turtle()
-    lapis.speed(3)
+
     lapis.pensize(5)
     lapis.penup()
     lapis.setpos(-180,40)
@@ -111,9 +100,7 @@ while True:
      for letra in palavra:
          senha+=letra if letra in acertos else "."
      def construindo_linhas():
-         lapis=turtle.Turtle()
          lapis.pensize(5)
-         lapis.speed(3)
          lapis.hideturtle()
          lapis.penup()
          lapis.setpos(-270,-80)
@@ -138,7 +125,6 @@ while True:
                construindo_forca()
      if erros>=1:
          construindo_cabeca()
-     linha2=""
      if erros==2:
          construindo_corpo()
      elif erros==3:
@@ -151,7 +137,7 @@ while True:
          construindo_perna2()
      if erros==6:
          def enforcado():
-             lapis=turtle.Turtle()
+             lapis.pensize(5)
              lapis.hideturtle()
              lapis.penup()
              lapis.setpos(10,10)
